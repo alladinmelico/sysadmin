@@ -20,13 +20,14 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Products</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <div class="collapse navbar-collapse d-flex" id="navbarNavAltMarkup">
+                <div class="navbar-nav flex-grow-1">
+                    <a class="nav-link active" href="./products.php">Products</a>
+                    <a class="nav-link" href="./customers.php">Customers</a>
+                    <a class="nav-link" href="./orders.php">Orders</a>
                 </div>
+                <div><?php echo htmlspecialchars($_SESSION["username"]); ?></div>
+                <a class="nav-link ml-auto" href="logout.php">Logout</a>
             </div>
         </div>
     </nav>
